@@ -26,11 +26,17 @@ class DockerRunExtension {
     private String image
     private List<String> command = ImmutableList.of()
     private Set<String> ports = ImmutableSet.of()
+    private String arguments
+
 
     public String getName() {
         return name
     }
 
+    public String GetArguments() {
+        return arguments
+    }
+    
     public void setName(String name) {
         this.name = name
     }

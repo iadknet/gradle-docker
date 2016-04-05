@@ -74,6 +74,7 @@ class DockerRunPlugin implements Plugin<Project> {
             dockerRun.with {
                 List<String> args = Lists.newArrayList()
                 args.addAll(['docker', 'run', '-d'])
+                args.add(ext.arguments)
                 for (String port : ext.ports) {
                     args.add('-p')
                     args.add(port)
